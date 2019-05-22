@@ -26,7 +26,6 @@ function openDoor(input) {
     };
 
     return false;
-
 }
 
 function makeItem(name, hasCoffee) {
