@@ -50,5 +50,4 @@ describe('largestNumber', function () {
     it('should return null if the array is empty', function () {
         assert.equal(null, largestNumber([]));
     });
-
 });
