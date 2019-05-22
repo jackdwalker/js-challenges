@@ -18,6 +18,7 @@ var numbers = 0;
 function setNumbers(num) {
   numbers = num;
 }
+
 var assert = require('assert');
 
 describe('jsIntro', () => {
