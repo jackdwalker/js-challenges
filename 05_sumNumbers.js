@@ -57,4 +57,8 @@ describe('findWinner', function () {
         players = [new Player('Nathan', [50, 100, 85]), new Player('James', [50, 100, 85])]
         assert.equal('Nathan', findWinner(players))
     })
+    it('Should return an error message if there are no players', function () {
+        players = []
+        assert.equal('There are no players', findWinner(players))
+    })
 })
