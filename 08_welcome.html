@@ -1,0 +1,57 @@
+<!-- 
+  Run this file in your browser to see what it does.
+  Your challenge is to:
+  1. CSS: Give the page a touch of styling. Add some padding to the input box.
+  2. JS:
+     a) If the user deletes their name, 'Welcome, ' is still shown. Fix this.
+     b) Make the user's name show in uppercase.
+  Hints:
+  - Just like Ruby, you can check name.value doesn't equal "".
+  - JS has a helper method for uppercase.
+  Beast mode:
+  1. Add another input box, ask for firstname lastname
+ -->
+<!doctype html>
+<html>
+  <head>
+    <title>Welcome</title>
+
+    <style>
+    body {
+      text-align: center;
+    }
+
+    input {
+        padding: 5px;
+    }
+    </style>
+  </head>
+
+  <body>
+
+    <h1></h1>
+    
+    <p><input id="firstname" type="text" placeholder="Enter your first name"></p>
+    
+    <p><input id="lastname" type="text" placeholder="Enter your last name"></p>
+
+  </body>
+
+  <script>
+    const names = Array.from(document.querySelectorAll('input'))
+    const firstname = document.querySelector('#firstname')
+    const lastname = document.querySelector('#lastname')
+    const welcomeMessage = document.querySelector('h1')
+  
+    names.forEach( name => {
+            name.onkeyup = function() {
+            if (names.every(name => name.value === "")) {
+                welcomeMessage.textContent = ""
+            } else {
+                welcomeMessage.textContent = `Welcome ${firstname.value.toUpperCase()} ${lastname.value.toUpperCase()}`
+            }
+        }
+    })
+  </script>
+
+</html>
