@@ -16,6 +16,19 @@ mocha 12_vowels.js
 
 function vowels (string) {
     // Your code here
+    let stringArr = string.split('');
+    let vowelsArr = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'];
+    let returnArr = [];
+
+    for (letter of stringArr) {
+        for (vowel of vowelsArr) {
+            if (letter == vowel) {
+               returnArr.push(letter);
+           }
+       }
+   }
+
+    return returnArr
 }
 
 
