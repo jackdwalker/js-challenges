@@ -60,6 +60,12 @@ const problem = {
 
 const dijkstra = (graph, start, end) => {
   // Your code here
+    
+    // Set our start and end nodes
+    let startNode = graph.start
+    let endNode = graph.end
+
+    
 };
 
 
